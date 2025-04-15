@@ -23,3 +23,13 @@ docker push ionutms/kicad:9.0
 # --rm to automatically remove the container when it exits
 docker run -it --rm ionutms/kicad:9.0
 ```
+
+## Build the image from a dockerfile
+```bash
+docker build -t ionutms/kicad:9.0 -f custom_kicad_docker.dockerfile .
+```
+
+## Inspect the image
+```bash
+docker inspect ionutms/kicad:9.0
+```
