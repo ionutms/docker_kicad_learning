@@ -38,3 +38,8 @@ docker inspect ionutms/kicad:9.0
 ```bash
 docker logs ionutms/kicad:9.0
 ```
+
+## Extract files from container
+```bash
+docker cp ionutms/kicad:9.0:/root/.config/kicad/9.0/kicad_common.json ./kicad_common.json
+```
