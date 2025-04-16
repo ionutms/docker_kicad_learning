@@ -33,3 +33,8 @@ docker build -t ionutms/kicad:9.0 -f custom_kicad_docker.dockerfile .
 ```bash
 docker inspect ionutms/kicad:9.0
 ```
+
+## View container logs
+```bash
+docker logs ionutms/kicad:9.0
+```
