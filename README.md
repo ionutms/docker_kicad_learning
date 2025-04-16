@@ -41,5 +41,6 @@ docker logs ionutms/kicad:9.0
 
 ## Extract files from container
 ```bash
+# docker cp container_name:/path/in/container /path/on/host
 docker cp ionutms/kicad:9.0:/root/.config/kicad/9.0/kicad_common.json ./kicad_common.json
 ```
