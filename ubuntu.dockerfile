@@ -16,10 +16,15 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     wget \
     gnupg \
+    ca-certificates \
+    git \
     && apt-get clean
 
-# Add KiCad 9 PPA and install KiCad
-RUN add-apt-repository ppa:kicad/kicad-9.0-releases && \
+# Add KiCad 9 PPA and install KiCad with retry mechanism
+RUN for i in {1..5}; do \
+        add-apt-repository ppa:kicad/kicad-9.0-releases && break || \
+        echo "Retrying PPA addition in 5 seconds..." && sleep 5; \
+    done && \
     apt-get update && \
     apt-get install -y kicad && \
     apt-get clean && \
@@ -30,6 +35,10 @@ RUN mkdir -p /root/.config/kicad/9.0/
 
 # Copy kicad_common.json from host to container
 COPY kicad_common.json /root/.config/kicad/9.0/kicad_common.json
+
+# Clone the 3D Models repository
+RUN mkdir -p /usr/share && \
+    git clone https://github.com/ionutms/3D_Models_Vault.git /usr/share/3D_Models_Vault
 
 # Set up startup script
 RUN mkdir -p /root/.vnc
