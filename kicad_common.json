@@ -29,7 +29,7 @@
   },
   "environment": {
     "vars": {
-      "TEEEEEEEST": "/usr/share/kicad/3dmodelssssss/"
+      "KICAD9_3D_MODELS_VAULT": "/usr/share/3D_Models_Vault/"
     }
   },
   "git": {
