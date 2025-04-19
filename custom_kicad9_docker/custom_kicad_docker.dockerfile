@@ -9,9 +9,6 @@ RUN mkdir -p /home/kicad/.config/kicad/9.0/
 # Copy kicad_common.json from host to container
 COPY kicad_common.json /home/kicad/.config/kicad/9.0/kicad_common.json
 
-# Copy Gruvbox.json from host to container
-COPY Gruvbox.json /home/kicad/.config/kicad/9.0/colors/Gruvbox.json
-
 # Install git if not already present (needed for cloning repositories)
 USER root
 RUN apt-get update && apt-get install -y git && apt-get clean
