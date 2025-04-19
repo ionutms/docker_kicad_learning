@@ -36,6 +36,18 @@ RUN mkdir -p /root/.config/kicad/9.0/
 # Copy kicad_common.json from host to container
 COPY kicad_common.json /root/.config/kicad/9.0/kicad_common.json
 
+# Create directory for KiCad configuration
+RUN mkdir -p /root/.local/share/kicad/9.0/3rdparty/colors/com_github_alexanderbrevig_kicad-gruvbox-theme/
+
+# Copy Gruvbox.json from host to container
+COPY Gruvbox.json /root/.local/share/kicad/9.0/3rdparty/colors/com_github_alexanderbrevig_kicad-gruvbox-theme/Gruvbox.json
+
+# Create directory for KiCad configuration
+RUN mkdir -p /root/.local/share/kicad/9.0/3rdparty/resources/com_github_alexanderbrevig_kicad-gruvbox-theme/
+
+# Copy icon.png from host to container
+COPY icon.png /root/.local/share/kicad/9.0/3rdparty/resources/com_github_alexanderbrevig_kicad-gruvbox-theme/icon.png
+
 # Clone the 3D Models repository
 RUN mkdir -p /usr/share && \
     git clone https://github.com/ionutms/3D_Models_Vault.git /usr/share/3D_Models_Vault
