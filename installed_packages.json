@@ -1,0 +1,45 @@
+{
+    "packages": [
+        {
+            "current_version": "1.1",
+            "install_timestamp": 1745003164,
+            "package": {
+                "author": {
+                    "contact": {
+                        "web": "https://alexanderbrevig.com"
+                    },
+                    "name": "Alexander Brevig"
+                },
+                "description": "A KiCAD adoptation of the Gruvbox theme",
+                "description_full": "Gruvbox is a popular theme. Gruvbox all the things!",
+                "identifier": "com.github.alexanderbrevig.kicad-gruvbox-theme",
+                "license": "MIT",
+                "maintainer": {
+                    "contact": {
+                        "web": "https://alexanderbrevig.com"
+                    },
+                    "name": "Alexander Brevig"
+                },
+                "name": "Gruvbox",
+                "resources": {
+                    "homepage": "https://github.com/alexanderbrevig/kicad-gruvbox-theme"
+                },
+                "type": "colortheme",
+                "versions": [
+                    {
+                        "download_sha256": "637ea8efe153cc64380c7e8bf78b92d65f80c901c234dc4d0229cf8dc55b94df",
+                        "download_size": 12915,
+                        "download_url": "https://github.com/AlexanderBrevig/kicad-gruvbox-theme/releases/download/v1.1/Gruvbox_v1.1.zip",
+                        "install_size": 21285,
+                        "kicad_version": "6",
+                        "status": "stable",
+                        "version": "1.1"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        }
+    ]
+}
